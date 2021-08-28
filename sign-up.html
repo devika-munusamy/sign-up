@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>LOGIN PAGE</TITLE>
+<style>
+input[type=text], input[type=password], input[type=email] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+button {
+  background-color:blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+}
+
+
+</style>
+</head>
+
+
+<body align="center">
+<div class="signup">
+<h1> Sign-up</h1>
+Name:
+<input type="text" id="name" placeholder="Enter your name"></br>
+Email-id:
+<input type="email" id="email" placeholder="Enter your mail-id"></br>
+Password:
+<input type="password"  id="password" placeholder="Enter your password"></br>
+<button onclick="SignupForm()" type="submit">Sign-up</button> </br>
+Already have an account? <button type="submit">Login</button>
+</div>
+<div class="login">
+<h1>Login page</h1>
+
+Email-id:
+<input type="email" id="log-mail" placeholder="Enter your mail-id"></br>
+Password:
+<input type="password" id="log-psw" placeholder="Enter your password"></br>
+<button onclick="LoginSubmit()" type="submit" >Login</button>
+
+
+
+</div>
+</body>
+<script type="text/javascript" >
+var name=document.getElementById("name");
+var mail=document.getElementById("email");
+var password=document.getElementById("password");
+function SignupForm(){
+	var name1=name.value;
+	var mail1=mail.value;
+	var password1=password.value;
+	
+	
+	if(mail && password && name){
+	alert("Welcome "+name1+".Your account has been created successfully");
+	}
+	else{
+	alert("enter your details!");
+	}
+	
+}
+/*function clickLogin(){
+	part2=document.getElementByClassName("login");
+	part2.style.visibility = 'visible';
+
+}*/
+function LoginSubmit(){
+	//var name=document.getElementById("name");
+	//var mail=document.getElementById("email");
+	//var password=document.getElementById("password");
+	
+	var name2=name.value;
+	
+	var mail2=document.getElementById("log-mail");
+	var password2=document.getElementById("log-psw");
+	
+	if((mail.value== mail2.value)&&(password.value==password2.value)){
+	alert("Welcome"+this.name2+" . You have logged in successfully" );
+	
+	}
+	else{
+	alert("wrong mail-id or password");
+	}
+
+}
+
+</script>
+
+</html>
